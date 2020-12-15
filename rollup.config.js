@@ -5,13 +5,13 @@ export default [
     input: "src/index.tsx",
     output: [
       {
-        file: "dist/index.js",
-        format: "cjs"
+        file: "dist/react-nexusui.js",
+        format: "cjs",
       },
       {
-        file: "dist/index.esm.js",
-        format: "esm"
-      }
+        file: "dist/react-nexusui.esm.js",
+        format: "esm",
+      },
     ],
     external: ["react", "nexusui"],
     plugins: [
@@ -20,10 +20,10 @@ export default [
         abortOnError: false,
         tsconfigOverride: {
           compilerOptions: {
-            module: "ES2015"
-          }
-        }
-      })
-    ]
-  }
+            module: "ES2015",
+          },
+        },
+      }),
+    ],
+  },
 ];

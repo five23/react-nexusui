@@ -1,4 +1,5 @@
 import * as Nexus from "nexusui";
+import { DEFAULT_SIZE } from "./constants";
 
 export type Size = [number, number];
 
@@ -160,4 +161,11 @@ export type Pan2DProps = {
   onChange?: (change: Pan2DChange) => any;
   onReady?: (pan: Nexus.Pan2D) => any;
 };
+
 export type Pan2DChange = number[];
+
+export type OscilloscopeProps = {
+  size?: Size;
+};
+
+export type OscilloscopeChange = {};

@@ -15,6 +15,8 @@ import { TextButton } from "./general/TextButton";
 import { Tilt } from "./mobile/Tilt";
 import { Pan } from "./spatialization/Pan";
 import { Pan2D } from "./spatialization/Pan2D";
+import { Oscilloscope } from "./visualization/Oscilloscope";
+
 export {
   Button,
   Toggle,
@@ -31,5 +33,6 @@ export {
   TextButton,
   Tilt,
   Pan,
-  Pan2D
+  Pan2D,
+  Oscilloscope
 };

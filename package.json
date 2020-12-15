@@ -1,15 +1,12 @@
 {
   "name": "react-nexusui",
-  "version": "0.1.4",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
-  "author": "rakannimer",
+  "version": "0.1.5",
+  "main": "dist/react-nexusui.js",
+  "module": "dist/react-nexusui.esm.js",
+  "types": "dist/types.d.ts",
+  "author": "five23",
   "license": "MIT",
-  "scripts": {
-    "start": "parcel demo/index.html",
-    "build:demo": "parcel build demo/index.html  -d demo-dist",
-    "deploy:demo": "npm run build:demo && cd demo-dist && surge --domain react-nexusui-demo.surge.sh",
+  "scripts": {        
     "build": "rollup -c",
     "test": "jest"
   },
@@ -17,10 +14,8 @@
     "@types/jest": "^26.0.19",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "babel-jest": "^26.6.3",
     "jest": "^26.6.3",
     "nexusui": "^2.1.6",
-    "parcel-bundler": "^1.12.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "rollup": "^2.35.1",
