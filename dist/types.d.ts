@@ -172,3 +172,7 @@ export declare type Pan2DProps = {
     onReady?: (pan: Nexus.Pan2D) => any;
 };
 export declare type Pan2DChange = number[];
+export declare type OscilloscopeProps = {
+    size?: Size;
+};
+export declare type OscilloscopeChange = {};

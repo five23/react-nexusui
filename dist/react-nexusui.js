@@ -721,11 +721,32 @@ const Pan2D = React.memo(function Pan2D({ size = [200, 200], onChange = () => { 
     return React.createElement("div", { id: elementId.current });
 });
 
+const Oscilloscope = React.memo(function Oscilloscope({ size = [640, 480], }) {
+    let osc = React.useRef(null);
+    let elementId = React.useRef(`nexus-ui-pan-${getId()}`);
+    React.useEffect(() => {
+        osc.current = new Nexus.Oscilloscope(elementId.current, { size });
+        return () => {
+            osc.current.destroy();
+        };
+    }, []);
+    React.useEffect(() => {
+        if (osc.current === null)
+            return;
+        if (!Array.isArray(size)) {
+            return;
+        }
+        osc.current.resize(...size);
+    }, size);
+    return React.createElement("div", { id: elementId.current });
+});
+
 exports.Button = Button;
 exports.Dial = Dial;
 exports.Envelope = Envelope;
 exports.Multislider = Multislider;
 exports.Number = Number;
+exports.Oscilloscope = Oscilloscope;
 exports.Pan = Pan;
 exports.Pan2D = Pan2D;
 exports.Piano = Piano;

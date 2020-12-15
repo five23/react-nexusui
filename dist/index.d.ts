@@ -14,4 +14,5 @@ import { TextButton } from "./general/TextButton";
 import { Tilt } from "./mobile/Tilt";
 import { Pan } from "./spatialization/Pan";
 import { Pan2D } from "./spatialization/Pan2D";
-export { Button, Toggle, Dial, Number, Position, Slider, Envelope, Multislider, Piano, RadioButton, Select, Sequencer, TextButton, Tilt, Pan, Pan2D };
+import { Oscilloscope } from "./visualization/Oscilloscope";
+export { Button, Toggle, Dial, Number, Position, Slider, Envelope, Multislider, Piano, RadioButton, Select, Sequencer, TextButton, Tilt, Pan, Pan2D, Oscilloscope };

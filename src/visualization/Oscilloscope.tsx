@@ -5,7 +5,7 @@ import { OscilloscopeProps, OscilloscopeChange } from "../types";
 import { getId } from "../utils";
 
 export const Oscilloscope = React.memo(function Oscilloscope({
-  size = [120, 30],
+  size = [640, 480],
 }: OscilloscopeProps) {
   let osc = React.useRef<null | Nexus.Oscilloscope>(null);
   let elementId = React.useRef(`nexus-ui-pan-${getId()}`);

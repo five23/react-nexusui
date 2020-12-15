@@ -1,6 +1,6 @@
 import React, { memo, useRef, useEffect, createElement } from 'react';
 import * as Nexus from 'nexusui';
-import { Button as Button$1, Toggle as Toggle$1, Dial as Dial$1, Number as Number$1, Position as Position$1, Slider as Slider$1, Envelope as Envelope$1, Multislider as Multislider$1, Piano as Piano$1, RadioButton as RadioButton$1, Select as Select$1, Sequencer as Sequencer$1, TextButton as TextButton$1, Tilt as Tilt$1, Pan as Pan$1, Pan2D as Pan2D$1 } from 'nexusui';
+import { Button as Button$1, Toggle as Toggle$1, Dial as Dial$1, Number as Number$1, Position as Position$1, Slider as Slider$1, Envelope as Envelope$1, Multislider as Multislider$1, Piano as Piano$1, RadioButton as RadioButton$1, Select as Select$1, Sequencer as Sequencer$1, TextButton as TextButton$1, Tilt as Tilt$1, Pan as Pan$1, Pan2D as Pan2D$1, Oscilloscope as Oscilloscope$1 } from 'nexusui';
 
 let id = 0;
 function getId() {
@@ -693,4 +693,24 @@ const Pan2D = memo(function Pan2D({ size = [200, 200], onChange = () => { }, onR
     return createElement("div", { id: elementId.current });
 });
 
-export { Button, Dial, Envelope, Multislider, Number, Pan, Pan2D, Piano, Position, RadioButton, Select, Sequencer, Slider, TextButton, Tilt, Toggle };
+const Oscilloscope = memo(function Oscilloscope({ size = [640, 480], }) {
+    let osc = useRef(null);
+    let elementId = useRef(`nexus-ui-pan-${getId()}`);
+    useEffect(() => {
+        osc.current = new Oscilloscope$1(elementId.current, { size });
+        return () => {
+            osc.current.destroy();
+        };
+    }, []);
+    useEffect(() => {
+        if (osc.current === null)
+            return;
+        if (!Array.isArray(size)) {
+            return;
+        }
+        osc.current.resize(...size);
+    }, size);
+    return createElement("div", { id: elementId.current });
+});
+
+export { Button, Dial, Envelope, Multislider, Number, Oscilloscope, Pan, Pan2D, Piano, Position, RadioButton, Select, Sequencer, Slider, TextButton, Tilt, Toggle };
