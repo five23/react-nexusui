@@ -6,7 +6,7 @@
   "types": "dist/types.d.ts",
   "author": "five23",
   "license": "MIT",
-  "scripts": {        
+  "scripts": {
     "build": "rollup -c",
     "test": "jest"
   },
