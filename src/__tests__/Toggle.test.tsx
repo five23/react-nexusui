@@ -1,6 +1,6 @@
 import "web-audio-test-api";
 import * as React from "react";
-import { render, fireEvent } from "react-testing-library";
+import { render, fireEvent } from "@testing-library/react";
 import { Toggle } from "../core/Toggle";
 
 describe("Toggle", () => {
