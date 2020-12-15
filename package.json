@@ -1,8 +1,8 @@
 {
   "name": "react-nexusui",
   "version": "0.1.5",
-  "main": "dist/react-nexusui.js",
-  "module": "dist/react-nexusui.esm.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "types": "dist/types.d.ts",
   "author": "five23",
   "license": "MIT",

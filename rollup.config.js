@@ -5,11 +5,11 @@ export default [
     input: "src/index.tsx",
     output: [
       {
-        file: "dist/react-nexusui.js",
+        file: "dist/index.js",
         format: "cjs",
       },
       {
-        file: "dist/react-nexusui.esm.js",
+        file: "dist/index.esm.js",
         format: "esm",
       },
     ],
