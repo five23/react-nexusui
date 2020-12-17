@@ -1,4 +1,5 @@
 import * as Nexus from "nexusui";
+export * from "./index";
 export declare type Size = [number, number];
 export declare type ToggleProps = {
     size?: Size;

@@ -1,4 +1,6 @@
 import * as Nexus from "nexusui";
+export * from "./index"
+
 import { DEFAULT_SIZE } from "./constants";
 
 export type Size = [number, number];
